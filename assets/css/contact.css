@@ -1,0 +1,374 @@
+/* ==========================================================================
+   Contact Us Page Specific Styles (True Edge-to-Edge & Light Theme)
+   Mobile Responsive Edition with Right Menu Toggle
+   ================================================================---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #4a4a4a;
+}
+
+p {
+    line-height: 1.9;
+    text-align: justify;
+}
+
+/* 1. Header & Mobile Navigation (Menu Button on Right) */
+header {
+    background: rgba(255, 255, 255, 0.98);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    width: 100%;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo img {
+    height: 65px;
+    width: auto;
+    display: block;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2.2rem;
+    color: #2c4c3b;
+    cursor: pointer;
+    user-select: none;
+    order: 2;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #2c4c3b;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover, 
+.nav-menu li a.active {
+    color: #c59b6d;
+}
+
+/* 2. Edge-to-Edge Wrapper */
+.contact-edge-wrapper {
+    width: 100%;
+    max-width: 100%;
+    padding: 60px 5%;
+    margin: 0;
+    box-sizing: border-box;
+    flex: 1; 
+}
+
+/* 3. Page Specific Hero Banner */
+.contact-hero {
+    background: linear-gradient(135deg, rgba(10, 25, 15, 0.7), rgba(44, 76, 59, 0.8)), 
+                url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhL4Ewc5xWofpeYl_wRJh7JSigXwcnSKdjCQncjZILavj8OQrkiTON2GonmEtmT1Jh3QuqBcPW5oIMccydCRYjWsPfHrDFhQQ_ylT7mI1u3hAWM2Toh3Vss0X19DGMG7RhTfLB28ALkeRe7-rRlLj2_0MLjYRIjpzyChC5hu8yjHEDlOg2XSPVNJw-WGs7R/s1600/1000307034.png') no-repeat center center/cover;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+}
+
+.contact-hero .contact-edge-wrapper {
+    padding: 100px 5%;
+    flex: none;
+}
+
+.contact-hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.contact-hero p {
+    font-size: 1.3rem;
+    max-width: 750px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* 4. Contact Info Cards Grid */
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto 60px auto;
+}
+
+.contact-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.03);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+.contact-card .icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.contact-card h3 {
+    color: #2c4c3b;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.contact-card p, .contact-card a {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-decoration: none;
+    font-weight: 500;
+    text-align: center;
+}
+
+.contact-card a:hover {
+    color: #c59b6d;
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    background: #25d366;
+    color: #fff !important;
+    padding: 14px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 20px;
+    transition: background 0.3s;
+    box-shadow: 0 5px 15px rgba(37,211,102,0.3);
+}
+
+.btn-whatsapp:hover {
+    background: #1ebd56;
+}
+
+/* 5. Modern Split Layout for Form & Map */
+.contact-split-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 50px;
+    max-width: 1400px;
+    margin: 0 auto 80px auto;
+    background: #f9fbf9;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+    border: 1px solid rgba(44, 76, 59, 0.05);
+}
+
+.contact-form-section {
+    padding: 60px;
+}
+
+.contact-form-section h2 {
+    color: #2c4c3b;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.contact-form-section > p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* 6. Form Styling */
+.enquiry-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: span 2;
+}
+
+.form-group label {
+    font-weight: 700;
+    color: #2c4c3b;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.form-group input, .form-group textarea {
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    font-family: inherit;
+    background: #ffffff;
+    transition: all 0.3s;
+    color: #333;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #c59b6d;
+    box-shadow: 0 0 0 3px rgba(197, 155, 109, 0.1);
+    outline: none;
+}
+
+.submit-btn {
+    background: #c59b6d;
+    color: #ffffff;
+    padding: 18px 40px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    grid-column: span 2;
+    justify-self: start;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: #b0865b;
+    transform: translateY(-2px);
+}
+
+/* 7. Embedded Map */
+.map-container {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* 8. FAQ Section */
+.faq-section {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.faq-section h2 {
+    text-align: center;
+    color: #2c4c3b;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.faq-item {
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.02);
+    border: 1px solid #f0f0f0;
+}
+
+.faq-item h4 {
+    color: #c59b6d;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1100px) {
+    .menu-toggle { display: block; }
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    }
+    .nav-menu.active {
+        max-height: 400px;
+        padding: 20px 0;
+    }
+
+    .contact-split-grid {
+        grid-template-columns: 1fr;
+    }
+    .map-container {
+        height: 400px;
+    }
+}
+
+@media (max-width: 900px) {
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .enquiry-form-grid {
+        grid-template-columns: 1fr;
+    }
+    .form-group.full-width {
+        grid-column: span 1;
+    }
+    .submit-btn {
+        grid-column: span 1;
+        width: 100%;
+    }
+    .contact-form-section {
+        padding: 40px 20px;
+    }
+}

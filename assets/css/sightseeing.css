@@ -1,0 +1,357 @@
+/* ==========================================================================
+   Sightseeing Page Specific Styles (True Edge-to-Edge & Light Theme)
+   Mobile Responsive Edition with Right Menu Toggle
+   ================================================================---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #4a4a4a;
+}
+
+p {
+    line-height: 1.9;
+    text-align: justify;
+}
+
+.bg-light-alt {
+    background-color: #f9fbf9;
+}
+
+/* 1. Header & Mobile Navigation (Menu Button on Right) */
+header {
+    background: rgba(255, 255, 255, 0.98);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    width: 100%;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo img {
+    height: 65px;
+    width: auto;
+    display: block;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2.2rem;
+    color: #2c4c3b;
+    cursor: pointer;
+    user-select: none;
+    order: 2;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #2c4c3b;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover, 
+.nav-menu li a.active {
+    color: #c59b6d;
+}
+
+/* 2. Edge-to-Edge Wrapper */
+.sightseeing-edge-wrapper {
+    width: 100%;
+    max-width: 100%;
+    padding: 60px 5%;
+    margin: 0;
+    box-sizing: border-box;
+    flex: 1; 
+}
+
+/* 3. Page Specific Hero Banner */
+.sightseeing-hero {
+    background: linear-gradient(135deg, rgba(10, 25, 15, 0.7), rgba(44, 76, 59, 0.8)), 
+                url('../images/hero.jpg') no-repeat center center/cover;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+}
+
+.sightseeing-hero .sightseeing-edge-wrapper {
+    padding: 100px 5%;
+    flex: none;
+}
+
+.sightseeing-hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.sightseeing-hero p {
+    font-size: 1.3rem;
+    max-width: 750px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* 4. Section Headers */
+.section-header-center {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header-center h3 {
+    color: #c59b6d;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.section-header-center h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #2c4c3b;
+    margin-bottom: 20px;
+}
+
+.section-header-center p {
+    color: #666;
+    font-size: 1.15rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* 5. Split-Layout Featured Attractions */
+.featured-attraction {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1300px;
+    margin: 0 auto 80px auto;
+    align-items: center;
+}
+
+.featured-attraction.reverse {
+    grid-template-columns: 1fr 1fr;
+}
+
+.featured-attraction.reverse .attraction-text {
+    order: 2;
+}
+
+.featured-attraction.reverse .attraction-image {
+    order: 1;
+}
+
+.attraction-text h3 {
+    color: #2c4c3b;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.attraction-text h4 {
+    color: #c59b6d;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.attraction-image img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+/* 6. Modern 3-Column Grid for Secondary Attractions */
+.sightseeing-grid-3x3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto 60px auto;
+}
+
+.sightseeing-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.sightseeing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(44, 76, 59, 0.1);
+}
+
+.sightseeing-img-wrapper {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    position: relative;
+}
+
+.sightseeing-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.sightseeing-card:hover .sightseeing-img-wrapper img {
+    transform: scale(1.08);
+}
+
+.sightseeing-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.sightseeing-content h3 {
+    color: #2c4c3b;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    font-weight: 800;
+}
+
+.sightseeing-content p {
+    color: #555;
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+/* 7. Distance Guide Table */
+.distance-guide-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+}
+
+.distance-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.distance-table th, .distance-table td {
+    padding: 20px 30px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.distance-table th {
+    background-color: #2c4c3b;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.distance-table td {
+    color: #555;
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.distance-table tr:last-child td {
+    border-bottom: none;
+}
+
+.distance-table tr:hover td {
+    background-color: #f9fbf9;
+}
+
+/* 8. Footer */
+footer {
+    background-color: #f4f6f4;
+    color: #666;
+    text-align: center;
+    border-top: 4px solid #c59b6d;
+    width: 100%;
+}
+
+footer .sightseeing-edge-wrapper {
+    padding: 40px 5%;
+    flex: none;
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 1100px) {
+    .menu-toggle { display: block; }
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    }
+    .nav-menu.active {
+        max-height: 400px;
+        padding: 20px 0;
+    }
+
+    .featured-attraction { grid-template-columns: 1fr; gap: 30px; text-align: center; }
+    .featured-attraction.reverse .attraction-text { order: 1; }
+    .featured-attraction.reverse .attraction-image { order: 2; }
+    .attraction-text p { text-align: center; }
+    
+    .sightseeing-grid-3x3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .sightseeing-grid-3x3 { grid-template-columns: 1fr; }
+    .distance-table th, .distance-table td { padding: 15px; }
+}

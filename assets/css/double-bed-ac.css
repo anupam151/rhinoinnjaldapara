@@ -1,0 +1,435 @@
+/* ==========================================================================
+   Double Bed A.C Room Specific Styles (True Edge-to-Edge & Light Theme)
+   Mobile Responsive Edition with Right Menu Toggle
+   ================================================================---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #4a4a4a;
+}
+
+p {
+    line-height: 1.9;
+    text-align: justify;
+}
+
+.bg-light-alt {
+    background-color: #f9fbf9;
+}
+
+/* 1. Header & Mobile Navigation (Menu Button on Right) */
+header {
+    background: rgba(255, 255, 255, 0.98);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    width: 100%;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo img {
+    height: 65px;
+    width: auto;
+    display: block;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2.2rem;
+    color: #2c4c3b;
+    cursor: pointer;
+    user-select: none;
+    order: 2;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #2c4c3b;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover, 
+.nav-menu li a.active {
+    color: #c59b6d;
+}
+
+/* 2. Edge-to-Edge Wrapper */
+.room-edge-wrapper {
+    width: 100%;
+    max-width: 100%;
+    padding: 60px 5%;
+    margin: 0;
+    box-sizing: border-box;
+    flex: 1; 
+}
+
+/* 3. Page Specific Hero Banner */
+.room-detail-hero {
+    background: linear-gradient(135deg, rgba(10, 25, 15, 0.7), rgba(44, 76, 59, 0.8)), 
+                url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi4NZprWBoZOYDL_1R7uxwYvxQqgwYCZAKV5zh47Uya8vSsVRt5k-iT95gTtcsSces1ZOdZiHJa-u2_nuDglFL-WJSvgG4EZd9aSLlxayDbQLPT2fyJdJsWdgToEGUiIiHQ1MMJJ-wJ2nNBRLc0_VpPdjF7i2nZQRJj8FK-2p-lBaszZFRluYNq_MG70-ZQ/s1600/1000308103.png') no-repeat center center/cover;
+    color: #ffffff;
+    text-align: center;
+    width: 100%;
+}
+
+.room-detail-hero .room-edge-wrapper {
+    padding: 100px 5%;
+    flex: none;
+}
+
+.room-detail-hero h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.room-detail-hero p {
+    font-size: 1.3rem;
+    max-width: 750px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* 4. Action Banner (Floating Style) */
+.room-action-banner {
+    background: #ffffff;
+    padding: 30px 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+    margin: -40px auto 60px auto; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(44, 76, 59, 0.05);
+    max-width: 1200px;
+    position: relative;
+    z-index: 10;
+}
+
+.banner-subtitle {
+    font-size: 1.1rem;
+    color: #888;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.room-price {
+    font-size: 3rem;
+    color: #2c4c3b;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-top: 5px;
+}
+
+.tax-info {
+    font-size: 1rem;
+    color: #c59b6d;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.banner-buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.room-action-banner .btn-whatsapp {
+    background: #25d366;
+    color: #fff;
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.1rem;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(37,211,102,0.3);
+}
+
+.room-action-banner .btn-whatsapp:hover {
+    background: #1ebd56;
+    transform: translateY(-3px);
+}
+
+.contact-phone-btn {
+    background: #f9fbf9;
+    color: #2c4c3b;
+    border: 2px solid #2c4c3b;
+    padding: 16px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.contact-phone-btn:hover {
+    background: #2c4c3b;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* 5. Modern Content Boxes */
+.room-content-box {
+    max-width: 1400px;
+    margin: 0 auto 80px auto;
+}
+
+.room-content-box h2 {
+    color: #2c4c3b;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #c59b6d;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* Multi-Column Text Layout */
+.text-columns {
+    column-count: 2;
+    column-gap: 60px;
+    color: #555;
+    font-size: 1.15rem;
+}
+
+.text-columns p {
+    margin-bottom: 25px;
+    break-inside: avoid;
+}
+
+/* 6. Photo Gallery (Strict 4:3) */
+.room-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.room-photo-grid img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: 0.4s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.room-photo-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+/* 7. Highlight Cards */
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.highlight-card {
+    background: #f9fbf9;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid rgba(44, 76, 59, 0.05);
+}
+
+.highlight-card h4 {
+    color: #2c4c3b;
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.highlight-card p {
+    text-align: center;
+    color: #666;
+}
+
+/* 8. Amenities & Policies */
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.amenity-badge {
+    background: #ffffff;
+    color: #2c4c3b;
+    padding: 20px 25px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+    display: flex;
+    align-items: center;
+}
+
+.info-split-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    max-width: 1400px;
+    margin: 0 auto 80px auto;
+}
+
+.policy-list {
+    list-style: none;
+    padding: 0;
+    color: #555;
+    font-size: 1.15rem;
+    line-height: 2.2;
+}
+
+.policy-list li {
+    margin-bottom: 15px;
+    padding-left: 35px;
+    position: relative;
+}
+
+.policy-list li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #c59b6d;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* 9. Other Rooms Grid */
+.other-rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.other-room-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.04);
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+}
+
+.other-room-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(44, 76, 59, 0.08);
+}
+
+.other-room-img-wrap {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+
+.other-room-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.other-room-card:hover .other-room-img-wrap img {
+    transform: scale(1.08);
+}
+
+.other-room-card h3 {
+    color: #2c4c3b;
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 25px;
+    margin: 0;
+    font-weight: 800;
+}
+
+/* 10. Footer */
+footer {
+    background-color: #f4f6f4;
+    color: #666;
+    text-align: center;
+    border-top: 4px solid #c59b6d;
+    width: 100%;
+}
+
+footer .room-edge-wrapper {
+    padding: 40px 5%;
+    flex: none;
+}
+
+/* 11. Responsive Media Queries */
+@media(max-width: 1200px) {
+    .room-photo-grid { grid-template-columns: repeat(2, 1fr); }
+    .highlight-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media(max-width: 992px) {
+    .menu-toggle { display: block; }
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    }
+    .nav-menu.active {
+        max-height: 400px;
+        padding: 20px 0;
+    }
+
+    .text-columns { column-count: 1; }
+    .info-split-grid { grid-template-columns: 1fr; gap: 40px; }
+    .other-rooms-grid { grid-template-columns: 1fr; }
+    .room-action-banner { flex-direction: column; gap: 25px; text-align: center; margin-top: 0; border-radius: 0; }
+    .banner-buttons { flex-direction: column; width: 100%; }
+    .banner-buttons a { width: 100%; text-align: center; }
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Rhino Inn Jaldapara</title>
+    <!-- Link to global stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Link to dedicated Contact page stylesheet -->
+    <link rel="stylesheet" href="assets/css/contact.css">
+</head>
+<body>
+
+    <!-- Top Contact Bar (Light Mode) -->
+    <div class="top-contact-bar">
+        <span>🕒 Every Day : 7 A.M - 11 P.M</span>
+        <span>📞 <a href="tel:9735449561">9735449561</a> , <a href="tel:9733105135">9733105135</a></span>
+    </div>
+
+    <!-- Fixed Structural Header & Mobile Menu (Hamburger on Right) -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgxCTIiPV_ZyKtzqp0HMuamzopXuERSbGFpkKuddALi6aBDqm84tHOT2IDzyMRbjRQ9tnr5BFjnUOysjAyP-X5RxugVk_Po-VPCd9Sl-JrIqskIWc9_Etptuv18kEuXTsCaNLIUL9Z91sksllTQqda5Q8uWuMqFXEKzICBPV-oEPybY9l0FMuzeJkxGqnZn=s1600" alt="Rhino Inn Jaldapara Logo">
+                </a>
+            </div>
+            
+            <!-- Mobile Hamburger Toggle on Right -->
+            <div class="menu-toggle" id="mobile-menu">☰</div>
+            
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="rooms.html">ROOMS</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="pages/sightseeing.html">SIGHTSEEING</a></li>
+                    <li><a href="contact.html" class="active">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Edge-to-Edge Hero Banner -->
+    <section class="contact-hero">
+        <div class="contact-edge-wrapper">
+            <h1>CONTACT US</h1>
+            <p>Reach out to us for reservations, Safari inquiries, and to plan your perfect Jaldapara adventure.</p>
+        </div>
+    </section>
+
+    <!-- Main Content (True Edge-to-Edge Wrapper) -->
+    <main class="contact-edge-wrapper">
+        
+        <!-- Official Contact Details Grid -->
+        <div class="contact-info-grid">
+            
+            <!-- Address Card -->
+            <div class="contact-card">
+                <span class="icon">📍</span>
+                <h3>Official Address</h3>
+                <p>
+                    Rhino Inn Jaldapara<br>
+                    Jaldapara National Park<br>
+                    Jaldapara, Alipurduar<br>
+                    West Bengal - 736182
+                </p>
+            </div>
+
+            <!-- Call/WhatsApp Card -->
+            <div class="contact-card">
+                <span class="icon">📞</span>
+                <h3>Call & Chat</h3>
+                <p>
+                    <a href="tel:9735449561">9735449561</a><br>
+                    <a href="tel:9733105135">9733105135</a>
+                </p>
+                <a href="https://wa.me/919735449561" class="btn-whatsapp" target="_blank">Chat on WhatsApp</a>
+            </div>
+
+            <!-- Email & Social Card -->
+            <div class="contact-card">
+                <span class="icon">✉️</span>
+                <h3>Connect With Us</h3>
+                <p>
+                    <a href="mailto:booking.rhinoinnjaldapara@gmail.com">booking.rhinoinnjaldapara@gmail.com</a>
+                </p>
+                <h3 style="margin-top: 20px; font-size: 1.1rem; margin-bottom: 5px;">Follow Us</h3>
+                <p style="font-size: 0.95rem; color: #888;">
+                    Facebook • Instagram • YouTube
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Modern Split Layout: Form on Left, Map on Right -->
+        <div class="contact-split-grid">
+            
+            <!-- Enquiry Form Section -->
+            <div class="contact-form-section">
+                <h2>Enquiry Now</h2>
+                <p>Fill out the form below with your requirements, and our reservation team will get back to you shortly.</p>
+                
+                <form action="#" method="POST" class="enquiry-form-grid">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your 10-digit number" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email ID">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="room_type">Room Preference</label>
+                        <input type="text" id="room_type" name="room_type" placeholder="e.g., Deluxe Room AC">
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="message">Your Message / Enquiry Details *</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Mention your check-in dates, number of guests, or Safari requests..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Enquiry</button>
+                </form>
+            </div>
+
+            <!-- High-Res Live Location Map Section -->
+            <div class="map-container">
+                <iframe 
+                    src="https://maps.google.com/maps?ll=26.633135,89.304837&z=15&t=h&hl=en&gl=IN&output=embed" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+        </div>
+
+        <!-- Frequently Asked Questions -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h4>What are the check-in and check-out timings?</h4>
+                <p>Our standard check-in time is 12:00 PM and check-out time is 10:00 AM. We can accommodate early check-ins based on room availability.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Do you assist with Jungle Safari bookings?</h4>
+                <p>Yes, we assist our guests in booking Elephant and Jeep Safaris inside Jaldapara National Park. Please mention this requirement while booking as slots fill up quickly.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Is the property safe for families and couples?</h4>
+                <p>Absolutely. We provide a highly secure environment with 24/7 staff support, free private parking, and a peaceful eco-friendly atmosphere perfect for families and couples.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Modern Footer -->
+    <footer>
+        <div class="contact-edge-wrapper" style="padding-top: 40px; padding-bottom: 40px; flex: none;">
+            <p>&copy; 2026 Rhino Inn Jaldapara | Designed & Developed by Anupam Das.</p>
+        </div>
+    </footer>
+
+    <!-- Inline JavaScript for Mobile Menu -->
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
